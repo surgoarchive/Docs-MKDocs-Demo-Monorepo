@@ -1,5 +1,5 @@
 INHERIT: ./base-mkdocs.yml
-site_name: Sites Stuff
+site_name: Root dash
 
 nav:
   - Intro: 'index.md'

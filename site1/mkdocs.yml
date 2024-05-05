@@ -1,8 +1,8 @@
-site_name: versions/v1
+site_name: Site1 Page
 
 # Repository - Uncommentd link to not show it
 repo_url: https://github.com/surgocode/Docs-MKDocs-Demo-Monorepo
-repo_name: surgocode/Docs-Webuild
+repo_name: surgocode/Docs-MKDocs-Demo-Monorepo
 edit_uri: edit/main
 
 nav:

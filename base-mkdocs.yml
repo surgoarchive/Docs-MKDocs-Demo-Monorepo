@@ -3,9 +3,9 @@ copyright: Copyright &copy; 2024 Surgo Systems
 
 theme:
   name: 'material'
-  # custom_dir: '../_assets/_mkdocs/overrides'
-  logo: '/_assets/logo.png'
-  favicon: '/_assets/favicon.png'
+  custom_dir: './_assets/_mkdocs/overrides'
+  logo: '/_assets/_mkdocs/logo.png'
+  favicon: '/_assets/_mkdocs/favicon.png'
   font:
     text: Inter
     code: Courier
@@ -57,7 +57,7 @@ theme:
         name: Switch to light mode
 
 extra_css:
-  - '_assets/custom.css'
+  - '_assets/_mkdocs/custom.css'
 
 # Extensions
 markdown_extensions:
