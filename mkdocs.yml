@@ -1,3 +1,4 @@
+INHERIT: ./base-mkdocs.yml
 site_name: Sites Stuff
 
 nav:
