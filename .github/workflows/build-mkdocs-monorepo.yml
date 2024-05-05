@@ -1,0 +1,45 @@
+name: build-mkdocs-monorepo
+on:
+  push:
+    branches:
+      - mkdocs-mono-repo-demo
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          key: ${{ github.ref }}
+          path: .cache
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-roamlinks-plugin
+      - run: pip install mkdocs-rss-plugin
+      - run: pip install mkdocs-same-dir  # Corrected indentation
+      - run: pip install mkdocs-monorepo-plugin
+      # - run: pip install mkdocs-mermaid2-plugin
+      - name: Build Example Docs
+        run: |
+          mkdocs build # Originally was using Github pages with "mkdocs gh-deploy --force"
+      - name: Deploy to branch dedicated to the built site
+        run: |
+          git config --global user.email "reesskennedy@gmail.com"
+          git config --global user.name "Reess Kennedy"
+          git checkout -b ${{ env.BUILT_BRANCH }}
+          # Remove all existing files in site dedicated to the built branch
+          git rm -rf .
+          # Move only the built documentation files to the branch dedicated to the built site
+          mv site/* .
+          # Add only the built documentation files
+          git add .
+          git commit -m "Deploy documentation to mkdocs-built-site branch"
+          git push --force origin ${{ env.BUILT_BRANCH }}
+
+env:
+  BUILT_BRANCH: mkdocs-built-site-monorepo
+

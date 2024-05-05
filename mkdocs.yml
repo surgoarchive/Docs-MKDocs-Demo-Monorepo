@@ -1,0 +1,13 @@
+site_name: Cats API
+
+nav:
+  - Intro: 'index.md'
+  - Authentication: 'authentication.md'
+  - Components: '*include ./components/*/mkdocs.yml'
+  - API:
+    - v1: '!include ./site1/mkdocs.yml'
+    - v2: '!include ./site2/mkdocs.yml'
+    - v3: '!include ./site3/mkdocs.yml'
+
+plugins:
+  - monorepo
