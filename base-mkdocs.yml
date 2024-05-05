@@ -1,4 +1,3 @@
-INHERIT: ./base-mkdocs.yml
 # Copyright
 copyright: Copyright &copy; 2024 Surgo Systems
 
