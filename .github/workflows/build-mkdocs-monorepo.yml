@@ -2,7 +2,8 @@ name: build-mkdocs-monorepo
 on:
   push:
     branches:
-      - mkdocs-mono-repo-demo
+      - main
+	  - master
 permissions:
   contents: write
 jobs:
