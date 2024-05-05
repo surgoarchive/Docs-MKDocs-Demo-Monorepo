@@ -1,4 +1,4 @@
-name: build-mkdocs-monorepo
+name: build-mkdocs-mono-repo
 on:
   push:
     branches:
