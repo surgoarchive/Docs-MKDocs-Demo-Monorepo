@@ -5,7 +5,4 @@ repo_url: https://rk.com/
 repo_name: surgocode/Docs-MKDocs-Demo-Monorepo
 edit_uri: edit/main
 
-nav:
-  - Migrating to v2: "migrating.md"
-  - Reference: "reference.md"
-  - Changelog: "changelog.md"
+
